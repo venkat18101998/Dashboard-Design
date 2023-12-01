@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { Grid } from '@mui/material';
 import './App.css';
+import DashboardContainer from './components/dashboardPage/DashboardContainer';
+import PaymentPage from './components/dashboardPage/PaymentPage';
+import Header from './components/layout/Header';
+import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header />
+      <Grid container spacing={2} p={1}>
+        <Grid item xs={3} mt={2}>
+          <PaymentPage />
+        </Grid>
+        <Grid item xs={9} mt={2}>
+          <DashboardContainer />
+        </Grid>
+      </Grid>
+    </React.Fragment>
+
   );
 }
 

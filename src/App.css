@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
+:root {
+  --common-color: #AFAFAF;
+  --border-red: red;
+  --border-blue: blue;
+  --border-green: green;
+  --border-pink: #f00d6f;
+  --card-title: #15223C;
+  --text-green: #2DD683;
+  --text-red: #E74A51;
+
+
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+
+  --font-size-16: 16px;
+  --font-size-20: 20px
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.custom-border {
+  border-left: 7px solid var(--border-pink);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.color-red {
+  border-left-color: var(--border-red);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.color-blue {
+  border-left-color: var(--border-blue);
+}
+
+.color-green {
+  border-left-color: var(--border-green);
+}
+
+.grapSection {
+  margin-top: 30px;
+}
+
+.mt-3 {
+  margin-bottom: 2%;
+}
+
+.cardTitle {
+  color: var(--card-title);
+  font-family: Poppins;
+  font-weight: var(--font-weight-600);
+  font-size: 22px;
+}
+
+.viewAll {
+  color: #00B3FF;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: var(--font-size-16);
+}
+
+.buttonName {
+  color: var(--common-color);
+  border-color: #E6E9EE !important;
+  font-weight: var(--font-weight-500) !important;
+  font-size: var(--font-size-16);
+}
+
+.expensesText {
+  color: var(--common-color);
+  font-weight: 400;
+  font-size: var(--font-size-16);
+}
+
+.amountValue {
+  color: var(--card-title);
+  font-family: Poppins;
+  font-weight: var(--font-weight-600) !important;
+  font-size: var(--font-size-20);
+  margin-top: 3%;
+}
+
+.cardRate {
+  font-weight: var(--font-weight-600) !important;
+  font-size: var(--font-size-20) !important;
+  color: var(--card-title);
+}
+
+.buttonLabel {
+  color: var(--text-green) !important;
+  background-color: #D8FFEC !important;
+  border-color: #D8FFEC !important;
+}
+
+p {
+  margin-left: 0px !important;
+}
+
+.increment {
+  font-weight: var(--font-weight-600) !important;
+  font-size: var(--font-size-20) !important;
+  color: var(--text-green);
+}
+
+.decrease {
+  font-weight: var(--font-weight-600) !important;
+  font-size: var(--font-size-20) !important;
+  color: var(--text-red);
+}
+
+.navHeading {
+  color: var(--common-color);
+}
+
+.logoHeading {
+  color: var(--card-title) !important;
+  font-weight: var(--font-weight-700) !important;
+}
+
+.ToggleSwitch {
+  width: 50px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 4px;
+  cursor: pointer;
+  margin-right: 13px;
 }
 
-.App-link {
-  color: #61dafb;
+.knob {
+  width: 20px;
+  height: 20px;
+  border-radius: 40%;
+  background-color: #fff;
+  transition: transform 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.knob.active {
+  transform: translateX(28px);
+}
+
+.ToggleSwitch .knob.active {
+  background-color: #15223C;
+  background-image: url(../src//assets/images/dark.png);
+}
+
+.ToggleSwitch .knob {
+  border: 1px solid #aaa;
+  background-image: url(../src//assets/images/brightness.png);
+}
+
+.ToggleSwitch .knob.active {
+  border: 1px solid #15223C;
+}
+
+.whiteText {
+  color: #FFFFFF;
+  font-weight: var(--font-weight-600);
 }
